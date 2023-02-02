@@ -1,0 +1,29 @@
+<!-- Use of show() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>show() function</title>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide(1000);
+            });
+
+            $("#show").click(function(){
+                $("p").show(1000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p><p>Lorem Ipsum is simply dummy text of the <br>printing and typesetting industry. Lorem <br> Ipsum has been the
+        industry's standard <br> dummy text ever since the 1500s, when an <br> unknown printer took a galley of type
+        <br> and scrambled it to make a type specimen book.</p></p>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+</body>
+</html>
