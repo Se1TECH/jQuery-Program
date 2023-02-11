@@ -1,0 +1,68 @@
+<!-- Use of slideUp() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#div1").slideUp();
+                $("#div2").slideUp("slow");
+                $("#div3").slideUp(3000);
+            });
+        });
+    </script>
+    <title>slideUp()</title>
+    <style>
+        #div1{
+            background-color: aqua;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        
+        #div2{
+            background-color: rgb(9, 255, 0);
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        
+        #div3{
+            background-color: rgb(255, 255, 0);
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">slideUp</button>
+    <div id="div1">Lorem Ipsum is simply dummy text of the <br>printing and typesetting industry. Lorem <br> Ipsum has
+        been the
+        industry's standard <br> dummy text ever since the 1500s, when an <br> unknown printer took a galley of type
+        <br> and scrambled it to make a type specimen book.
+    </div>
+
+    <div id="div2">Lorem Ipsum is simply dummy text of the <br>printing and typesetting industry. Lorem <br> Ipsum has
+        been the
+        industry's standard <br> dummy text ever since the 1500s, when an <br> unknown printer took a galley of type
+        <br> and scrambled it to make a type specimen book.
+    </div>
+
+    <div id="div3">Lorem Ipsum is simply dummy text of the <br>printing and typesetting industry. Lorem <br> Ipsum has
+        been the
+        industry's standard <br> dummy text ever since the 1500s, when an <br> unknown printer took a galley of type
+        <br> and scrambled it to make a type specimen book.
+    </div>
+
+</body>
+
+</html>
