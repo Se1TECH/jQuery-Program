@@ -1,0 +1,62 @@
+<!-- Use of slideToggle() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#div1").slideToggle();
+                $("#div2").slideToggle("slow");
+                $("#div3").slideToggle(3000);
+
+            });
+        });
+    </script>
+    <title>slideToggle()</title>
+    <style>
+        #div1{
+            background-color: darkslategrey;
+            margin: 15px;
+            padding: 10px;
+        }
+
+        
+        #div2{
+            background-color: rgb(45, 227, 227);
+            margin: 15px;
+            padding: 10px;
+        }
+
+        
+        #div3{
+            background-color: rgb(183, 167, 244);
+            margin: 15px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">slideToggle</button>
+    <div id="div1">Lorem Ipsum is simply dummy text of the <br>printing and typesetting industry. Lorem <br> Ipsum has
+        been the
+        industry's standard <br> dummy text ever since the 1500s, when an <br> unknown printer took a galley of type
+        <br> and scrambled it to make a type specimen book.
+    </div>
+
+    <div id="div2">Lorem Ipsum is simply dummy text of the <br>printing and typesetting industry. Lorem <br> Ipsum has
+        been the
+        industry's standard <br> dummy text ever since the 1500s, when an <br> unknown printer took a galley of type
+        <br> and scrambled it to make a type specimen book.
+    </div>
+
+    <div id="div3">Lorem Ipsum is simply dummy text of the <br>printing and typesetting industry. Lorem <br> Ipsum has
+        been the
+        industry's standard <br> dummy text ever since the 1500s, when an <br> unknown printer took a galley of type
+        <br> and scrambled it to make a type specimen book.
+    </div>
+</body>
+</html>
