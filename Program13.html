@@ -1,0 +1,27 @@
+<!-- Use of html() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#p1").html("Changed <b>Paragraph1</b>");     
+                $("#p2").html("Changed <b>Paragraph2</b>");     
+                $("#p3").html("Changed <b>Paragraph3</b>");     
+            });
+        });
+    </script>
+    <title>html()</title>
+
+</head>
+<body>
+    <button id="btn">Change text</button>
+    <p id="p1">first paragraph</p>
+    <p id="p2">second paragraph</p>
+    <p id="p3">third paragraph</p>
+</body>
+</html>
