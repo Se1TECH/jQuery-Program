@@ -1,0 +1,38 @@
+<!-- Use of val() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>val()</title>
+    <style>
+        #p1{
+            color: red;
+            margin: 4px;
+        }
+
+        b{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1"></p>
+    <select name="gender1" id="gender">
+        <option >Male</option>
+        <option >Female</option>
+        <option >Others</option>
+    </select>
+
+    <script>
+        function display(){
+            var genderval = $("#gender").val();
+            $("#p1").html("<b>Value : </b>"+ genderval);
+        }
+        $("#gender").change( display);
+        display();
+    </script>
+</body>
+</html>
