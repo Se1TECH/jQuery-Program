@@ -1,0 +1,46 @@
+<!-- Use of before() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>before</title>
+    <style>
+        #p1{
+            background-color: aquamarine;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #p2{
+            background-color: rgb(255, 227, 127);
+            padding: 10px;
+            text-align: center;
+        }
+
+        #p3{
+            background-color: rgb(208, 255, 127);
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">add content before</button>
+    <p id="p1">first paragraph</p>
+    <p id="p2">second paragraph</p>
+    <p id="p3">third paragraph</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#p1").before("<p><b> before first paragraph</b><p>");
+                $("#p2").before("<p><b> before second paragraph</b><p>");
+                $("#p3").before("<p><b> before third paragraph</b><p>");
+            });
+        });
+    </script>
+</body>
+</html>
