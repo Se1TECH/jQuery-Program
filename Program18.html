@@ -1,0 +1,40 @@
+<!-- Use of prepend() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>prepend</title>
+    <style>
+        #p1{
+            background-color: cadetblue;
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #p2{
+            background-color: rgb(0, 241, 249);
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">add text to prepend</button>
+    <p id="p1">paragraph</p>
+    <p id="p2">paragraph</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#p1").prepend("<b> First </b>");
+                $("#p2").prepend("<b> Second </b>");
+            });
+        });
+    </script>
+</body>
+</html>
