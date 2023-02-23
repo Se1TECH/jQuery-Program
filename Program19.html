@@ -1,0 +1,53 @@
+<!-- Use of after() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>after()</title>
+    <style>
+        #p1{
+            background-color: cornflowerblue;
+            padding: 5px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #p2{
+            background-color: rgb(166, 237, 100);
+            padding: 5px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #p3{
+            background-color: rgb(237, 216, 100);
+            padding: 5px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <button id="btn">show text after</button>
+
+    <p id="p1">fisrt paragraph</p>
+    <p id="p2">fisrt paragraph</p>
+    <p id="p3">fisrt paragraph</p>
+
+    <script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            $("#p1").after("<p><b> after first paracgraph</b></p>");
+            $("#p2").after("<p><i> after first paracgraph</i></p>");
+            $("#p3").after("<p><b> after first paracgraph</b></p>");
+        })
+    })
+    
+    </script>
+</body>
+</html>
