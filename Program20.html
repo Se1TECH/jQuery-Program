@@ -1,0 +1,58 @@
+<!-- Use of insertAfter() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>insertAfter()</title>
+    <style>
+        #p1{
+            background-color: cornflowerblue;
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+
+        #p2{
+            background-color: rgb(143, 237, 100);
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #p3{
+            background-color: cornflowerblue;
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        b{
+            background-color: rgb(237, 100, 107);
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn">insert after</button>
+    <p id="p1">first paragraph</p>
+    <p id="p2">second paragraph</p>
+    <p id="p3">third paragraph</p>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("<p><b>insert after first paragraph.</b></p> ").insertAfter("#p1");
+                $("<p><b>insert after second paragraph.</b> </p>").insertAfter("#p2");
+                $("<p><b>insert after third paragraph.</b> </p>").insertAfter("#p3");
+            })
+        })
+    </script>
+</body>
+</html>
