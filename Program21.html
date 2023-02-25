@@ -1,0 +1,55 @@
+<!-- Use of append() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>append()</title>
+    <style>
+        #p1{
+            background-color: rgb(86, 255, 255);
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        
+        #p2{
+            background-color: rgb(148, 255, 86);
+            padding: 10px;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <button id="btn1">add text into para</button>
+    <button id="btn2">add list </button>
+
+    <p id="p1">first paragraph</p>
+    <p id="p2">second paragraph</p>
+
+    <ol id="ol1">
+        <li> item 1 </li>
+        <li> item 2 </li>
+        <li> item 3 </li>
+    </ol>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#p1").append("<i> New append Text </i>")
+                $("#p2").append("<i> New append Text </i>")
+            });
+
+            $("#btn2").click(function(){
+                $("#ol1").append("<li><i> new item </i></li>");
+            });
+        });
+    </script>
+</body>
+</html>
