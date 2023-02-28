@@ -1,0 +1,56 @@
+<!-- Use of remove() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>remove()</title>
+    <style>
+        #p1{
+            background-color: rgb(139, 226, 226);
+            text-align: center;
+            padding: 10px;
+            font-size: 25px;
+        }
+
+        
+        #p2{
+            background-color: rgb(184, 226, 139);
+            text-align: center;
+            padding: 10px;
+            font-size: 25px;
+        }
+
+        #p3{
+            background-color: rgb(226, 181, 139);
+            text-align: center;
+            padding: 10px;
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button id="btn1">remove first para</button>
+    <button id="btn2">remove second para</button>
+
+    <p id="p1">para 1</p>
+    <p id="p2">para 2</p>
+    <p id="p3">para 3</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#p1").remove();
+            });
+
+            $("#btn2").click(function(){
+                $("#p2").remove();
+            });
+        });
+    </script>
+</body>
+</html>
