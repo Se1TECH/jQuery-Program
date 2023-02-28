@@ -1,0 +1,64 @@
+<!-- Use of clone() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>clone()</title>
+    <style>
+        #p1{
+            background-color: rgb(190, 234, 190);
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        
+        #p2{
+            background-color: rgb(236, 219, 143);
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        
+        #p3{
+            background-color: rgb(154, 129, 224);
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        #p4{
+            background-color: rgb(80, 211, 255);
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn1">para1 clone</button>
+    <button id="btn2">para2 clone</button>
+
+    <p id="p1">para 1</p>
+    <p id="p2">para 2</p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("#p1").clone().appendTo("#p3");
+            });
+
+            $("#btn2").click(function(){
+                $("#p2").clone().appendTo("#p4");
+            });
+        });
+    </script>
+</body>
+</html>
