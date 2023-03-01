@@ -1,0 +1,28 @@
+<!-- Use of empty() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>empty()</title>
+</head>
+<body>
+    
+    <div style="background-color: rgb(196, 251, 141);padding:10px;margin:10px">click me! (for empty content)</div>
+
+    <div style="background-color: rgb(251, 163, 141);padding:10px;margin:10px">click me! (for empty content)</div>
+    
+    <div style="background-color: rgb(192, 141, 251);padding:10px;margin:10px">click me! (for empty content)</div>
+
+
+    <script>
+        $(document).ready(function(){
+            $("div").click(function(){
+                $(this).empty();
+            });
+        });
+    </script>
+</body>
+</html>
