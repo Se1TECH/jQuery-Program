@@ -1,0 +1,29 @@
+<!-- Use of attr() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>attr()</title>
+</head>
+<body>
+    <button id="btn1">one attr change</button>
+    <button id="btn2">multiple attr change</button><br><br>
+
+    <img src="bluebackground.jpeg" alt="" width="100px" height="100px">
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("img").attr("width","200px");
+            });
+
+            $("#btn2").click(function(){
+                $("img").attr({"width":"200px","height":"200px"});
+            });
+        });
+    </script>
+</body>
+</html>
