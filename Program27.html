@@ -1,0 +1,49 @@
+<!-- Use of addClass() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>addclass()</title>
+    <style>
+        .p1
+        {
+            color:blue;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .p2{
+            color:rgb(255, 0, 0);
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .p3{
+            color:rgb(47, 255, 0);
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn1">add class</button>
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("p:first").addClass("p1");
+                $("p+p").addClass("p2");
+                $("p:last").addClass("p3");
+            });
+        });
+    </script>
+
+</body>
+</html>
