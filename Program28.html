@@ -1,0 +1,48 @@
+<!-- Use of toggleClass() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>toggleClass()</title>
+    <style>
+        .p1{
+            color: darkslategray;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .p2{
+            color: rgb(255, 230, 0);
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        .p3{
+            color: rgb(84, 87, 245);
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <Button id="btn1">toggle Class</Button>
+    <p>first para</p>
+    <p>second para</p>
+    <p>third para</p>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("p").toggleClass("p1");
+                $("p+p").toggleClass("p2");
+                $("p:last").toggleClass("p3");
+            });
+        });
+    </script>
+
+</body>
+</html>
