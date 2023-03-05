@@ -1,0 +1,60 @@
+<!-- Use of width() & height() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>width and height</title>
+    <style>
+
+        
+        div{
+            background-color: rgb(255, 102, 0);
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .div1{
+            background-color: blue;
+            margin: 20px;
+        }
+
+        .div2{
+            background-color: rgb(64, 255, 0);
+            margin: 20px;
+        }
+
+        .div3{
+            background-color: rgb(255, 0, 43);
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+        $("div:first").click(function(){
+            $(this).width( 120).addClass("div1");
+        });
+
+        
+        $("div+div").click(function(){
+            $(this).height( 120).addClass("div2");
+        });
+
+        
+        $("div:last").click(function(){
+            $(this).width( 120).height(120).addClass("div3");
+        });
+
+
+    </script>
+
+</body>
+</html>
