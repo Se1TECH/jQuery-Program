@@ -1,0 +1,53 @@
+<!-- Use of innerWidth() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>innerWidth()</title>
+    <style>
+        #div1{
+            background-color: chartreuse;
+            margin: 10px;
+            padding: 10px;
+            width: 60px;
+        }
+
+        #div2{
+            background-color: rgb(68, 0, 255);
+            margin: 10px;
+            padding: 20px;
+            width: 60px;
+        }
+
+        #div3{
+            background-color: rgb(221, 0, 255);
+            margin: 10px;
+            padding: 30px;
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Click any box</p>
+    <span id="result"></span>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("div").click(function(){
+                var color = $(this).css("background-color");
+                var width = $(this).innerWidth();
+
+                $("#result").html("Inner width is <span> " + width + "</span>" );
+                $("#result").css("color",color);
+            });
+        });
+    </script>
+</body>
+</html>
