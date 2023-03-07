@@ -1,0 +1,40 @@
+<!-- Use of innerHeight() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>innerHeight</title>
+    <style>
+        div{
+            background-color: darkcyan;
+            height: 120px;
+            width: 90px;
+            margin: 20px;
+            float: left;
+            text-align: center;
+        }
+        
+        .divheight{
+            background-color: mediumblue;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Click any box</p>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <script>
+        var decheight = 100;
+        $("div").click(function(){
+            $(this).innerHeight(decheight).addClass("divheight");
+            decheight-=20;
+        });
+    </script>
+</body>
+</html>
