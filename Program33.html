@@ -1,0 +1,33 @@
+<!-- Use of serialize() Function in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>serialize</title>
+</head>
+<body>
+
+    <form action="">
+    first name: <input type="text" name="firstname" value="Hello"><br><br>
+
+    last name: <input type="text" name="firstname" value="World"><br><br>
+    </form>
+
+    <button id="btn">click see output in serialize</button>
+
+    <div></div>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("div").text($("form").serialize());
+            });
+        });
+    </script>
+
+</body>
+</html>
