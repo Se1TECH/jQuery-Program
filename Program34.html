@@ -1,0 +1,51 @@
+<!-- Use of bind() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>bind()</title>
+    <style>
+        p {
+            text-align: center;
+            background-color: rgb(208, 183, 232);
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .over {
+            text-align: center;
+            background-color: rgb(232, 206, 183);
+            margin: 20px;
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p> click or double click on this paragraph</p>
+    <span></span>
+
+    <script>
+        $(document).ready(function () {
+            $("p").bind("click", function () {
+                $("span").text("This is single click");
+            });
+
+            $("p").bind("dblclick", function () {
+                $("span").text("This is double click");
+            });
+
+            $("p").bind("mouseenter mouseleave", function (event) {
+                $(this).toggleClass("over");
+            });
+        });
+    </script>
+</body>
+
+</html>
