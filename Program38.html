@@ -1,0 +1,26 @@
+<!-- Use of mouseenter() & mouseleave() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>mouseenter & mouseleave</title>
+</head>
+<body>
+    
+    <p>Move your mouse over the paragraph </p>
+
+    <script>
+        $(document).ready(function(){
+            $("p").mouseenter(function(){
+                $("p").css({"background-color":"blue","color":"white"});
+            });
+            $("p").mouseleave(function(){
+                $("p").css({"background-color":"green","color":"white"});
+            });
+        });
+    </script>
+</body>
+</html>
