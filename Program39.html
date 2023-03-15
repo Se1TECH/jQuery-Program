@@ -1,0 +1,44 @@
+<!-- Use of children() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("div").children("ul:first").css({"border":"6px dashed red","color":"red"});
+            });
+        });
+    </script>
+    <title>children</title>
+    <style>
+        .body1 *{
+            border: 2px solid black;
+            margin: 20px;
+            padding: 10px;
+            position: relative;
+            display: block;
+            color: black
+        }
+    </style>
+</head>
+<body class="body1">body
+    
+    <div>DIV ELEMENT
+        <ul>
+            First ul Element
+            <p>Paragraph Element</p> 
+        </ul>
+        <ul>
+            Second ul Element
+            <h2>H2 Element</h2>
+        </ul>
+    </div>
+    <button id="btn">Click Me</button>
+    
+</body>
+
+</html>
