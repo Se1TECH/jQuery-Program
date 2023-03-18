@@ -1,0 +1,31 @@
+<!-- Use of grep() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>grep()</title>
+</head>
+<body>
+    <p>Click button to see effect.</p>
+    <button id="btn">Click Me</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+</body>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                var arr = [10,20,30,40,50,20];
+                $("#p1").html("Array Element before applying the grep methd: " + arr + "<br>");
+                
+                arr = $.grep(arr,function(element,index){
+                    return (element != 20);
+                },true);
+                
+                $("#p2").html("Array Element after applying the grep methd: " + arr + "<br>");
+            })
+        })
+    </script>
+</html>
