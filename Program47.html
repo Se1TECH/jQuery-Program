@@ -1,0 +1,50 @@
+<!-- Use of is() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>is()</title>
+    <style>
+        .s1{
+            background-color: chartreuse;
+            font-size: 30px;
+        }
+
+        .s2{
+            background-color: rgb(0, 242, 255);
+            font-size: 30px;
+        }
+
+        .s3{
+            background-color: rgb(255, 0, 4);
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    click paragraph for effect.
+    <p id="p1">Click Me</p>
+    <p id="p2">Click Me</p>
+    <p id="p3">Click Me</p>
+
+</body>
+
+    <script>
+        $(document).ready(function(){
+            $("p").click(function(){
+                if($(this).is("#p1")){
+                    $("#p1").text("This is First Paragraph").addClass("s1");
+                }else if($(this).is("#p2")){
+                    $("#p2").text("This is First Paragraph").addClass("s2");
+                }else{
+                    $("#p3").text("This is First Paragraph").addClass("s3");
+                }
+            
+            });
+        });
+    </script>
+</html>
