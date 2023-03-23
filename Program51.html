@@ -1,0 +1,43 @@
+<!-- Read More and Read Less using jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Read More and Read Less</title>
+    <style>
+        .more{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, sint.
+
+        <span class="dots">...</span>
+        <span class="more">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore quis rem perspiciatis repellat cum quidem fugit vitae rerum commodi dolore obcaecati veritatis dolorem autem aperiam ipsum itaque delectus recusandae minima, eius dicta! Saepe, architecto.</span>
+        <br><br>
+        <button class="read">Read More</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".read").click(function(){
+                $(this).prev().toggle();
+                $(this).siblings('.dots').toggle();
+                if($(this).text() == 'Read More'){
+                    $(".more").css("display","contents");
+                    $(this).text('Read Less');
+                }else{
+                    $(".more").css("display","none");
+                    $(this).text('Read More');
+                }
+            });
+        });
+    </script>
+</body>
+    
+</html>
