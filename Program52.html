@@ -1,0 +1,43 @@
+<!-- Use of :enabled in jquery.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>:enabled</title>
+    <style>
+        .click{
+            background-color: cyan;
+            font-weight: bolder;
+            border-width: 3px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <p>Use of :enabled selector</p>
+        first name: <input type="text" name="fname" id="fname"><br><br>
+
+        last name: <input type="text" name="lname" id="lname" disabled="disabled"><br><br>
+
+        Mobile no: <input type="text" name="phone" id="phone" ><br><br>
+
+        email: <input type="email" name="email" id="email" disabled="disabled"><br><br>
+
+        <input type="submit" value="Submit" disabled="disabled">
+
+        <button id="btn">Click me to see enabled inputs</button>
+
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $(":enabled").addClass("click");
+            });
+        });
+    </script>
+</body>
+</html>
