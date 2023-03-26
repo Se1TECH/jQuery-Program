@@ -1,0 +1,76 @@
+<!-- Use of :nth-child selector in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>nth-child selector</title>
+    <style>
+        .whitec{
+            background-color: white;
+        }
+
+        .nthclass{
+            background-color: aqua;
+        }
+
+        .oddclass{
+            background-color: blue;
+        }
+
+        .evenclass{
+            background-color: rgb(72, 244, 72);
+        }
+
+        .formulaclass{
+            background-color: darkgray;
+        }
+    </style>
+</head>
+<body>
+    use of nth-child selector
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+    <button id="nth"> nth-child(5)</button>
+    <button id="odd"> nth-child(odd)</button>
+    <button id="even"> nth-child(even)</button>
+    <button id="formula"> nth-child(4n+4)</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#nth").click(function(){
+                $("li:nth-child(5)").addClass("nthclass");
+            });
+
+            $("#odd").click(function(){
+                $("li").addClass("whitec");
+                $("li:nth-child(odd)").addClass("oddclass");
+            });
+
+            $("#even").click(function(){
+                $("li").addClass("whitec");
+                $("li:nth-child(even)").addClass("evenclass");
+            });
+
+            $("#formula").click(function(){
+                $("li").addClass("whitec");
+                $("li:nth-child(4n+4)").addClass("formulaclass");
+            });
+        });
+    </script>
+</body>
+
+</html>
