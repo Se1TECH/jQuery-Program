@@ -1,0 +1,33 @@
+<!-- Use of removeAttr() method in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>removeAttr()</title>
+    <style>
+        .css1{
+            background-color: aqua;
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="para1" class="css1"> this is first paragraph</p>
+    <p id="para2" class="css1"> this is first paragraph</p>
+
+    <button id="btn">Click me to remove Attribute</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#para1").removeAttr("class");
+            });
+        });
+    </script>
+</body>
+</html>
