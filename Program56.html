@@ -1,0 +1,33 @@
+<!-- Use of replaceWith() method in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>replaceWith()</title>
+    <style>
+        h1,h2{
+            background-color: chocolate;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">This is div 1</div>
+    <div id="div2">This is div 2</div>
+    <br><br>
+    <button id="btn">Click me to replace div into h1 and h2</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#div1").replaceWith("<h1> Hello World use of h1 tag</h1>");
+
+                $("#div2").replaceWith("<h2> Welcome to all, use of h1 tag</h2>");
+            });
+        });
+    </script>
+</body>
+</html>
