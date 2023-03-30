@@ -1,0 +1,33 @@
+<!-- Use of first() method in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>first()</title>
+</head>
+<body>
+    <div>First Div</div>
+    <p>First paragraph</p>
+    <div>Second Div</div>
+    <p>Second paragraph</p>
+    <div>Third Div</div>
+    <p>Third paragraph</p>
+    <div>Fourth Div</div>
+    <p>Fourth paragraph</p>
+
+    <button id="btn">Click me to change color of first paragraph</button>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("p").first().css({"background-color":"green","text-align":"center"});
+                
+                $("div").first().css({"background-color":"yellow","text-align":"center"});
+
+            });
+        });
+    </script>
+</body>
+</html>
