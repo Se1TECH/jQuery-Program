@@ -1,0 +1,31 @@
+<!-- Use of :contains selector in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>:contains selector</title>
+</head>
+<body>
+    <p>paragraph 1</p>
+    <div> this is div 1</div>
+    <p>paragraph 2</p>
+    <div> this is div 2</div>
+    <p>paragraph 3</p>
+    <div> this is div 3</div>
+    <br>
+    <div> is div 4</div>
+
+    <button id="btn">click to see which div contains this keyword</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("div:contains(this)").css("background-color","green");
+            });
+        });
+    </script>
+</body>
+</html>
