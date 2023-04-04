@@ -1,0 +1,36 @@
+<!-- Use of :lt & :gt selector in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:lt & :gt</title>
+</head>
+<body>
+    <p>1 paragraph</p>
+    <p>2 paragraph</p>
+    <p>3 paragraph</p>
+    <p>4 paragraph</p>
+    <p>5 paragraph</p>
+    <p>6 paragraph</p>
+    <p>7 paragraph</p>
+    <p>8 paragraph</p>
+    <p>9 paragraph</p>
+    <p>10 paragraph</p>
+    <button id="lt">:lt selector </button>
+    <button id="gt">:gt selector </button>
+</body>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#lt").click(function(){
+                $("p:lt(5)").css("background-color","cyan");
+            });
+
+            $("#gt").click(function(){
+                $("p:gt(3)").css("background-color","red");
+            });
+        });
+    </script>
+</html>
