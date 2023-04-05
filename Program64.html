@@ -1,0 +1,31 @@
+<!-- Use of map() method in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map()</title>
+</head>
+<body>
+    <h2>Use of map() method</h2>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <button id="btn">Click me </button>
+
+</body>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                var array = [10,20,30,40,50];
+                var newArray = jQuery.map(array, function(val){
+                    return val+3;
+                });
+                document.getElementById("p1").innerHTML = "<b> Original Array is : </b>" + JSON.stringify(array);
+
+                document.getElementById("p2").innerHTML = "<b> new Array after using map method is : </b>" + JSON.stringify(newArray);
+            });
+        });
+    </script>
+</html>
