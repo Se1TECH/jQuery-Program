@@ -1,0 +1,33 @@
+<!-- Use of inArray() method in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inArray()</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <button id="btn">click me</button>
+
+</body>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var arr = ['A','a','B','b','C','c','D','d','E','e'];
+            var val = "e";
+            document.getElementById("p1").innerHTML = "<b>Array is:  </b> [ " + arr + "]";
+
+            document.getElementById("p2").innerHTML = "<b>value which we want to find a index of it in array :  </b>"  + val;
+
+            //array index will start from 0
+            $("#btn").click(function(){
+                document.getElementById("p3").innerHTML = "<b>Index is :  </b>"  + $.inArray(val,arr);
+            });
+
+        });
+    </script>
+</html>
