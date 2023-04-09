@@ -1,0 +1,38 @@
+<!-- Use of dblclick() method in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dblclick()</title>
+    <style>
+        #p2{
+            background-color: aqua;
+            font-size: 30px;
+            text-align: center;
+            margin: 20px 0px;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">Use of dblClick</p>
+    <p id="p2"></p>
+    <button id="btn">Click me one time or twice</button>
+
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn").click(function(){
+            $("#p2").html("You clicked button one time");
+        });
+
+        $("#btn").dblclick(function(){
+            $("#p2").html("You clicked button twice ");
+        });
+    });
+
+
+</script>
+</html>
