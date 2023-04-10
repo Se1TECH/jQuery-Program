@@ -1,0 +1,31 @@
+<!-- Use of $.proxy() method in jquery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$.proxy()</title>
+</head>
+<body>
+    <p>Use of $.proxy method</p>
+    <p>click button to see effect</p>
+    <button id="btn">Click me</button>
+    <p id="p1"></p>
+</body>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var employee={
+                name : "John",
+                age : "32",
+                salary : "32000",
+                post: "manager",
+                function1:function(){
+                    $("#p1").append("Name: " + this.name + "<br>Age: " + this.age + "<br>Salary: " +this.salary+ "<br>post: " + this.post);
+                }
+            };
+            $("#btn").click($.proxy(employee,"function1"));
+        })
+    </script>
+</html>
