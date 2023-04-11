@@ -1,0 +1,40 @@
+<!-- Use of has() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>has()</title>
+    <style>
+        div{
+            border: 2px solid black;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p>Use of has Function</p>
+    <div>
+        <p>This is first div paragraph</p>
+    </div>
+
+    <div>
+        <h4>This is second div h4 tag</h4>
+    </div>
+
+    <div>
+        <p>This is third div paragraph</p>
+    </div>
+
+    <button id="btn">Click Me</button>
+</body>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("div").has("p").css({"background-color":"blue","text-align":"center"});
+            })
+        })
+    </script>
+</html>
