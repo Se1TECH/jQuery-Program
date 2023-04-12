@@ -1,0 +1,37 @@
+<!-- Use of index() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index()</title>
+</head>
+<body>
+    <h2>Use of index method</h2>
+    <h5>click to paragraph</h5>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <p id="p1">Paragraph 4</p>
+    <p>Paragraph 5</p>
+
+    when using index(). <b>index : </b><span id="s1"></span><br><br>
+    when using index("p"). <b>index : </b><span id="s2"></span><br><br>
+    when using index("#p1"). <b>index : </b><span id="s3"></span><br><br>
+</body>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").click(function(){
+                $("p").css({"background-color":"white","border":"0px solid black"});
+
+                $(this).css({"background-color":"blue","border":"2px solid black"});
+
+                document.getElementById("s1").innerHTML = $(this).index();
+                document.getElementById("s2").innerHTML = $(this).index("p");
+                document.getElementById("s3").innerHTML = $(this).index("#p1");
+            });
+        });
+    </script>
+</html>
