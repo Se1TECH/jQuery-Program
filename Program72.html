@@ -1,0 +1,33 @@
+<!-- Use of merge() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>merge</title>
+</head>
+<body>
+    <p id="p1">First array : </p>
+    <p id="p2">Second array : </p>
+    <p id="p3">merged array: </p>
+
+    <button id="btn">Click me</button>
+</body>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                var arr1 = ['1','2','3','4','5'];
+                var arr2 = ['6','7','8','9','10'];
+
+                $("#p1").append(JSON.stringify(arr1));
+                $("#p2").append(JSON.stringify(arr2));
+                
+                $.merge(arr1,arr2);
+                $("#p3").append(JSON.stringify(arr1));
+
+            });
+        });
+    </script>
+</html>
