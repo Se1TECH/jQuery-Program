@@ -1,0 +1,29 @@
+<!-- Use of prevAll() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prevAll</title>
+</head>
+<body>
+    <div>div element
+        <ul>ul element</ul>
+        <p>Paragraph1 tag</p>
+        <p>Paragraph2 tag</p>
+        <p>Paragraph3 tag</p>
+        <h2>h2 tag</h2>
+        <p>Paragraph tag</p>
+    </div>
+    <button id="btn">Click Me</button>
+</body>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("p").prevAll().css({"background-color":"blue","text-align":"center","font-size":"30px"});
+            });
+        });
+    </script>
+</html>
