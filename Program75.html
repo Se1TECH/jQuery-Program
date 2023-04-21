@@ -1,0 +1,30 @@
+<!-- Use of scroll() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll()</title>
+    <style>
+        #p1{
+            height: 100px;
+            width: 300px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h2>scroll the bar to see the effect.</h2>
+    <p id="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta consequatur maiores enim sed quam est doloribus quasi, totam ab officia minus porro optio sequi iure repellendus consequuntur non beatae quibusdam nam debitis. Accusamus, saepe! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut veniam repudiandae distinctio facilis, perferendis explicabo libero omnis ex nihil mollitia nesciunt esse quaerat aliquid neque voluptatibus molestias qui provident rerum illo quas praesentium. Eum.</p>
+</body>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#p1").scroll(function(){
+                $("#p1").css("color","red");
+                $("#p1").css("background","cyan");
+            });
+        });
+    </script>
+</html>
