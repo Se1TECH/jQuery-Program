@@ -1,0 +1,26 @@
+<!-- Use of keypress() Function in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keypress</title>
+</head>
+<body>
+    <p>keypress function </p>
+    <input type="text" name="" id="text1">
+    <p id="p1">which key is press :</p>
+
+</body>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#text1").keypress(function(e){
+                var k = e.keyCode;
+                var ch = String.fromCharCode(k);
+                $("#p1").append(ch);
+            });
+        });
+    </script>
+</html>
