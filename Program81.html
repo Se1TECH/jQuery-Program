@@ -1,0 +1,24 @@
+<!-- Use of :hidden selector in jquery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:hidden selctor</title>
+</head>
+<body>
+    <p>Use of :hidden selctor, to see a effect click on the button</p>
+    <h1 style="display:none">Hello World</h1>
+    <button id="btn">Click Me</button>
+
+</body>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("h1:hidden").show();
+            });
+        });
+    </script>
+</html>
